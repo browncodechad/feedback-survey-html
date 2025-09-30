@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedback Survey</title>
+        <link rel="icon" href="Media/icon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header align="center">
+            <h1>Feedback Survey</h1>
+        </header>
+        <main>
+            <form action="index.php" method="POST" id="form"> <!-- enctype="multipart/form-data" is only used when the user has to enter any files such as images -->
+                <label for="name">Name:</label>
+                <input id="name" type="text" placeholder="Name" name="user_name" required> <!--I have to write the name= and value= everytime there is input--> 
+                <br><label for="email">Email:</label>
+                <input id="email" type="email" placeholder="abc123@fake.com" name="user_email" required>
+                <br><label for="prod">Select your product:</label><select id="prod" name="product_selected">
+                    <option value="Earbuds">Earbuds</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="Laptop">Laptop</option>
+                </select><br>
+                <label for="exp">How was your experience?:</label>
+                <label for="excellent">Excellent</label>
+                <input type="radio" id="excellent" value="Excellent" name="exp">
+                <label for="fair">Fair</label> 
+                <input type="radio" id="fair" value="Fair" name="exp">
+                <label for="avg">Average</label>
+                <input type="radio" id="avg" value="Average" name="exp">
+                <label for="poor">Poor</label>
+                <input type="radio" id="poor" value="Poor" name="exp">
+                <label for="horrible">Horrible</label>
+                <input type="radio" id="horrible" value="Horrible" name="exp"><br>
+                <label for="feedback">Tell us about your experience:</label>
+                <textarea rows="2" cols="30" name="feedback_text" id="feedback"></textarea><br>
+                <input type="button" value="Submit Feedback">
+            </form>
+        </main>
+        <footer><br>
+            Thank you for taking our survey!
+        </footer>
+    </body>
+</html>

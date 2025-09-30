@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Feedback Survey</title>
+        <link rel="icon" href="Media/icon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header align="center">
+            <h1>Product Feedback Survey</h1>
+            <h4>Attempt No.5</h4>
+        </header>
+        <main>
+            <form action="index.php" method="POST" enctype="multipart/form-data">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" required>
+                <br><label for="email">Email:</label>
+                <input type="email" id="email" name="user_email" placeholder="abc123@fake.com" required>
+                <br><label for="prod">Select your product:</label>
+                <select id="prod" name="product_selected" required>
+                    <option value="" disabled selected></option><!-- Always add these or otherwise the default option will be the first one and since there is also a required tag, the check will pass immediately without the user even touching the dropdown -->
+                    <option value="Earbuds">Earbuds</option>
+                    <option value="Mobile">Mobile</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="Laptop">Laptop</option>
+                </select>
+                <br><label for="img">Enter an image of the product:</label>
+                <input id="img" type="file" accept="image/jpg" name="product_img" required><br>              
+                <label for="exp" name="user_experience">How was your experience?:</label>
+                <label for="exc">Excellent</label>
+                <input type="radio" id="exc" name="exp" value="Excellent" required>
+                <label for="fair">Fair</label>
+                <input type="radio" id="fair" name="exp" value="Fair">
+                <label for="avg">Average</label>
+                <input type="radio" id="avg" name="exp" value="Average">
+                <label for="poor">Poor</label>
+                <input type="radio" id="poor" name="exp" value="Poor">
+                <label for="horrible">Horrible</label>
+                <input type="radio" id="horrible" name="exp" value="Horrible">
+                <br><label for="feedback">Please share some details about your experience:</label>
+                <textarea id="feedback" name="feedback_text"></textarea><br>
+                <input type="button" value="submit">
+                <input type="reset">
+            </form> 
+        </main>
+        <footer>
+            <h4>Thank you for taking our survey!</h4>
+        </footer>
+    </body>
+</html>

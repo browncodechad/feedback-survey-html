@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Feedback Survey</title>
+        <link rel="icon" href="Media/icon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header align="center">
+            <h1>Product Feedback Survey</h1>
+            <h4>Attempt No.6</h4>
+        </header>
+        <main>
+            <form action="index.php" method="POST" enctype="multipart/form-data">
+                <div class="intro">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="user_name" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="user_email" placeholder="abc123@fake.com" required>
+                </div>
+                <div class="product">
+                    <label for="prod">Choose your product</label>
+                    <select id="prod" name="selected_product" required>
+                        <option value="" disabled selected></option>
+                        <option value="Earbuds">Earbuds</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Tablet">Tablet</option>
+                        <option value="Laptop">Laptop</option>
+                    </select><br>
+                    <label for="img">Enter an image of your product:</label>
+                    <input id="img" type="file" name="product_img" accept="image/jpg, image/png, image/img, image/jpeg">
+                </div>
+                <div class="user_experience">
+                    <p>How was your experience?:</p> 
+                    <label for="excellent">Excellent</label>
+                    <input type="radio" id="excellent" name="exp" value="Excellent" required>
+                    <label for="fair">Fair</label>
+                    <input type="radio" id="fair" name="exp" value="Fair">
+                    <label for="avg">Average</label>
+                    <input type="radio" id="avg" name="exp" value="Average">
+                    <label for="poor">Poor</label>
+                    <input type="radio" id="poor" name="exp" value="Poor">
+                    <label for="horrible">Horrible</label>
+                    <input type="radio" id="horrible" name="exp" value="Horrible">
+                    <br><label for="feedback">Please give some details about your experience:</label>
+                    <textarea id="feedback" name="feedback_text"></textarea>                   
+                </div>
+                <div class="buttons">
+                    <input type="button" value="Submit">
+                    <input type="reset">
+                </div>
+            </form>
+        </main>
+        <footer>
+            <h4>Thank you for taking our survey!</h4>
+        </footer>
+    </body>
+</html>
