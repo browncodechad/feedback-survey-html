@@ -1,0 +1,1 @@
+I was practicing HTML forms and found out that Its one of my weakest points, so I decided that I'll practice harder and force myself to code more and more forms day in day out, this is one of the 4-5 projects that I'll be doing in total so I can solidify my understand of forms and be a better programmer.
